@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product Id="*" Name="Cmd-Open" Language="1033" Version="1.0.0.0" Manufacturer="mcdon-ron" UpgradeCode="df7f19b6-9aed-43d3-adf7-2ced6b4aa98c">
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine"
+             Description="Re-enables *Open command window here* in Windows 10."
+             Comments="https://github.com/mcdon-ron/cmd-open" />
+
+    <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+    <MediaTemplate EmbedCab="yes" CompressionLevel="high" />
+
+    <Feature Id="ProductFeature" Title="cmd_open" Level="1">
+      <ComponentGroupRef Id="ProductComponents" />
+    </Feature>
+
+    <Icon Id="CO_icon" SourceFile="cmd.ico" />
+    <Property Id="ARPCOMMENTS" Value="Re-enables *Open command window here* in Windows 10." />
+    <Property Id="ARPPRODUCTICON" Value="CO_icon" />
+    <SetProperty Id="ARPINSTALLLOCATION" Value="[INSTALLFOLDER]" After="CostFinalize" />
+    <SetProperty Id="ARPREADME" Value="[#readme.md]" After="CostFinalize" />
+    <Property Id="ARPURLINFOABOUT" Value="https://github.com/mcdon-ron/cmd-open" />
+
+    <UIRef Id="WixUI_Minimal" />
+    <WixVariable Id="WixUILicenseRtf" Value="..\..\LICENSE.rtf" />
+  </Product>
+
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="INSTALLFOLDER" Name="cmd_open" />
+      </Directory>
+    </Directory>
+  </Fragment>
+
+  <Fragment>
+    <ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+      <ComponentGroupRef Id="directory_background" />
+      <ComponentGroupRef Id="directory_shell" />
+      <ComponentGroupRef Id="drive_shell" />
+      <Component>
+        <File Source="..\..\readme.md" />
+      </Component>
+      <Component>
+        <File Source="..\..\LICENSE" />
+      </Component>
+      <!-- TODO: Remove the comments around this Component element and the ComponentRef below in order to add resources to this installer. -->
+      <!-- <Component Id="ProductComponent"> -->
+      <!-- TODO: Insert files, registry keys, and other resources here. -->
+      <!-- </Component> -->
+    </ComponentGroup>
+  </Fragment>
+</Wix>

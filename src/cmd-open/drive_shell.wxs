@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <ComponentGroup Id="drive_shell" Directory="INSTALLFOLDER">
+            <Component Id="cmp1BF1B27B59EB021B40DFD1D171BE0CAB" Guid="{E37FC8B9-59E6-462F-AA3A-17DABFCA0497}" KeyPath="yes">
+                <RegistryKey Key="Drive\shell\cmd-open" Root="HKCR">
+                    <RegistryValue Value="@shell32.dll,-8506" Type="string" />
+                    <RegistryValue Name="Icon" Value="[SystemFolder]cmd.exe" Type="string" />
+                    <RegistryValue Name="Extended" Value="" Type="string" />
+                    <RegistryValue Name="NoWorkingDirectory" Value="" Type="string" />
+                </RegistryKey>
+            </Component>
+            <Component Id="cmp4CB4A0D370F2C5B607C47D14B35A1D82" Guid="{7CA08BED-F4C4-40F3-BBC4-09C24115577F}" KeyPath="yes">
+                <RegistryKey Key="Drive\shell\cmd-open\command" Root="HKCR">
+                    <RegistryValue Value='cmd.exe /s /k pushd "%V"' Type="string" />
+                </RegistryKey>
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>

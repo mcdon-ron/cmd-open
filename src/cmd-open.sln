@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2020
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "cmd-open", "cmd-open\cmd-open.wixproj", "{4B05D00C-ECA3-4F9A-A634-66F7ADBC733E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C8B2281E-F77B-4C56-9B04-0425D77E328D}"
+	ProjectSection(SolutionItems) = preProject
+		..\LICENSE = ..\LICENSE
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4B05D00C-ECA3-4F9A-A634-66F7ADBC733E}.Debug|x86.ActiveCfg = Debug|x86
+		{4B05D00C-ECA3-4F9A-A634-66F7ADBC733E}.Debug|x86.Build.0 = Debug|x86
+		{4B05D00C-ECA3-4F9A-A634-66F7ADBC733E}.Release|x86.ActiveCfg = Release|x86
+		{4B05D00C-ECA3-4F9A-A634-66F7ADBC733E}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5B6B8033-CAD8-4266-B32A-FEDF850593B8}
+	EndGlobalSection
+EndGlobal

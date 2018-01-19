@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <ComponentGroup Id="directory_shell" Directory="INSTALLFOLDER">
+            <Component Id="cmpE9A2E5303EF87E29308AFB71839836D8" Guid="{76B2BDF7-7FE8-4006-9386-8375C4577164}" KeyPath="yes">
+                <RegistryKey Key="Directory\shell\cmd-open" Root="HKCR">
+                    <RegistryValue Value="@shell32.dll,-8506" Type="string" />
+                    <RegistryValue Name="Icon" Value="[SystemFolder]cmd.exe" Type="string" />
+                    <RegistryValue Name="Extended" Value="" Type="string" />
+                    <RegistryValue Name="NoWorkingDirectory" Value="" Type="string" />
+                </RegistryKey>
+            </Component>
+            <Component Id="cmp1DCA7EF6E0EB434D5ACC88AD1976E104" Guid="{D5E39043-F967-4DC7-A432-399015071E94}" KeyPath="yes">
+                <RegistryKey Key="Directory\shell\cmd-open\command" Root="HKCR">
+                    <RegistryValue Value='cmd.exe /s /k pushd "%V"' Type="string" />
+                </RegistryKey>
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>

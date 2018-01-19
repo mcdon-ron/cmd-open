@@ -1,0 +1,4 @@
+/src/.vs
+/src/cmd-open/bin
+/src/cmd-open/obj
+/src/cmd-open/*.user
