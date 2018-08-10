@@ -12,7 +12,7 @@
             </Component>
             <Component Id="cmp1DCA7EF6E0EB434D5ACC88AD1976E104" Guid="{D5E39043-F967-4DC7-A432-399015071E94}" KeyPath="yes">
                 <RegistryKey Key="Directory\shell\cmd-open\command" Root="HKCR">
-                    <RegistryValue Value='cmd.exe /s /k pushd "%V"' Type="string" />
+                    <RegistryValue Value='cmd.exe /s /k "pushd ""%V"" &amp; title Command Prompt"' Type="string" />
                 </RegistryKey>
             </Component>
         </ComponentGroup>
