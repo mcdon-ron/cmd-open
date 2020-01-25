@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-  <Product Id="*" Name="Cmd-Open" Language="1033" Version="1.0.1.0" Manufacturer="mcdon-ron" UpgradeCode="df7f19b6-9aed-43d3-adf7-2ced6b4aa98c">
+  <Product Id="*" Name="Cmd-Open" Language="1033" Version="1.0.2.0" Manufacturer="mcdon-ron" UpgradeCode="df7f19b6-9aed-43d3-adf7-2ced6b4aa98c">
     <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine"
              Description="Re-enables *Open command window here* in Windows 10."
              Comments="https://github.com/mcdon-ron/cmd-open" />

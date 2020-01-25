@@ -2,7 +2,7 @@
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
     <Fragment>
         <ComponentGroup Id="directory_shell" Directory="INSTALLFOLDER">
-            <Component Id="cmpE9A2E5303EF87E29308AFB71839836D8" Guid="{76B2BDF7-7FE8-4006-9386-8375C4577164}" KeyPath="yes">
+            <Component Id="cmpE9A2E5303EF87E29308AFB71839836D8" Guid="{21B19C2C-80E2-4CCC-9128-EF6D98834517}" KeyPath="yes">
                 <RegistryKey Key="Directory\shell\cmd-open" Root="HKCR">
                     <RegistryValue Value="@shell32.dll,-8506" Type="string" />
                     <RegistryValue Name="Icon" Value="[SystemFolder]cmd.exe" Type="string" />
@@ -10,9 +10,9 @@
                     <RegistryValue Name="NoWorkingDirectory" Value="" Type="string" />
                 </RegistryKey>
             </Component>
-            <Component Id="cmp1DCA7EF6E0EB434D5ACC88AD1976E104" Guid="{D5E39043-F967-4DC7-A432-399015071E94}" KeyPath="yes">
+            <Component Id="cmp1DCA7EF6E0EB434D5ACC88AD1976E104" Guid="{B25D310D-5838-47BE-881F-0379497B2AFB}" KeyPath="yes">
                 <RegistryKey Key="Directory\shell\cmd-open\command" Root="HKCR">
-                    <RegistryValue Value='cmd.exe /s /k "pushd ""%V"" &amp; title Command Prompt"' Type="string" />
+                    <RegistryValue Value='cmd.exe /s /k pushd "%V" &amp; title Command Prompt' Type="string" />
                 </RegistryKey>
             </Component>
         </ComponentGroup>
