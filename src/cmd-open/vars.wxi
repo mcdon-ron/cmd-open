@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include>
+	<?define cmd='cmd.exe /s /k pushd "%V" & title Command Prompt'?>
+</Include>

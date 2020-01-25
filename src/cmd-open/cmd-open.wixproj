@@ -26,6 +26,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="cmd.ico" />
+    <Content Include="vars.wxi" />
   </ItemGroup>
   <ItemGroup>
     <WixExtension Include="WixUIExtension">

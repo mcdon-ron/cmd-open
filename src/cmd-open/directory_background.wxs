@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<?include vars.wxi?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
     <Fragment>
         <ComponentGroup Id="directory_background" Directory="INSTALLFOLDER">
@@ -12,7 +13,7 @@
             </Component>
             <Component Id="cmp5FFD20C5DFA5FEB24C0F494EA3701CAC" Guid="{B3D65C2A-9C7A-4159-8A77-719B0A59ADAC}" KeyPath="yes">
                 <RegistryKey Key="Directory\Background\shell\cmd-open\command" Root="HKCR">
-                    <RegistryValue Value='cmd.exe /s /k pushd "%V" &amp; title Command Prompt' Type="string" />
+                    <RegistryValue Value='$(var.cmd)' Type="string" />
                 </RegistryKey>
             </Component>
         </ComponentGroup>
